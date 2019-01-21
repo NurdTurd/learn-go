@@ -26,10 +26,12 @@ archive:
 checksum:
   name_template: 'checksums.txt'
 snapshot:
-  name_template: "{{ .ShortCommit }}-{{ .Tag }}"
+  name_template: "{{ .FullCommit }}"
 changelog:
   sort: asc
   filters:
     exclude:
     - '^docs:'
     - '^test:'
+release:
+  disable: true
